@@ -1,0 +1,71 @@
+{
+  "target_simulator": "NEURON",
+  "run": {
+    "tstart": 0.0,
+    "tstop": 3000.0,
+    "dt": 0.1,
+    "dL": 20.0,
+    "spike_threshold": -15.0,
+    "nsteps_block": 5000
+  },
+  "conditions": {
+    "celsius": 34.0,
+    "v_init": -80.0
+  },
+  "output": {
+    "log_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\output\\log.txt",
+    "output_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\output",
+    "spikes_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\output\\spikes.h5"
+  },
+  "reports": {
+    "v_report": {
+      "variable_name": "v",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    }
+  },
+  "node_sets_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\node_sets.json",
+  "network": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\circuit_config.json",
+  "config_path": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\simulation_config.json",
+  "config_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta",
+  "components": {
+    "biophysical_neuron_models_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\biophysical_neuron_models",
+    "mechanisms_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\mechanisms",
+    "morphologies_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\morphologies",
+    "point_neuron_models_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\point_neuron_models",
+    "synaptic_models_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\synaptic_models",
+    "templates_dir": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\components\\templates"
+  },
+  "networks": {
+    "nodes": [
+      {
+        "nodes_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\exp0net_nodes.h5",
+        "node_types_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\exp0net_node_types.csv"
+      },
+      {
+        "nodes_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\hippocampus_nodes.h5",
+        "node_types_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\hippocampus_node_types.csv"
+      }
+    ],
+    "edges": [
+      {
+        "edges_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\exp0net_hippocampus_edges.h5",
+        "edge_types_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\exp0net_hippocampus_edge_types.csv"
+      },
+      {
+        "edges_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\hippocampus_hippocampus_edges.h5",
+        "edge_types_file": "C:\\Users\\Tyler\\Desktop\\git_stage\\theta\\sim_theta\\network\\hippocampus_hippocampus_edge_types.csv"
+      }
+    ],
+    "gap_juncs": []
+  },
+  "node_sets": {
+    "biophysical_nodes": {
+      "model_type": "biophysical"
+    },
+    "point_nodes": {
+      "model_type": "point_process"
+    }
+  }
+}
